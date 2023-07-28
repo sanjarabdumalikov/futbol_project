@@ -23,7 +23,7 @@ class Place(models.Model):
     image = models.ImageField(upload_to='upolad/Place')
     booking_place_per_hour=models.IntegerField(default=0)
     user = models.ForeignKey(User,on_delete=models.CASCADE,default=None,null=True)
-
+    note=models.CharField()
 
     def str(self) -> str:
         return self.name
