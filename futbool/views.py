@@ -26,6 +26,6 @@ class AllCreateBookingView(generics.ListCreateAPIView):
     serializer_class = BookingSerializer
 
 
-class DetailUpdateDeleteApiView(generics.RetrieveUpdateDestroyAPIView):
+class RUDView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Place.objects.all()
     serializer_class = BookingSerializer
