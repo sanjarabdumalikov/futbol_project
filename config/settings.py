@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 
 AUTH_USER_MODEL = 'futbool.CustomUser'
 
+
 # Application definition
 
 INSTALLED_APPS = [
