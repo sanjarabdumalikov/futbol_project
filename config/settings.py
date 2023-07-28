@@ -132,12 +132,12 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-LANGUAGES = (
-    ('uz', 'Uzbek'),
-    ('en', 'English'),
+# LANGUAGES = (
+#     ('uz', 'Uzbek'),
+#     ('en', 'English'),
     
-)
-MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
+# )
+# MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
