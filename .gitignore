@@ -92,7 +92,7 @@ coverage.xml
 staticfiles/
 # celery
 celerybeat-schedule.*
-
+.env/
 # SageMath parsed files
 *.sage.py
 
