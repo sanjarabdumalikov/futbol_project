@@ -39,8 +39,8 @@ INSTALLED_APPS = [
     'futbool',
     'rest_framework',
     'rest_framework_simplejwt',
-    'modeltranslation',
-    'config',
+    # 'modeltranslation',
+    # 'config',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -131,12 +131,16 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-LANGUAGES = (
-    ('uz', 'Uzbek'),
-    ('en', 'English'),
-    
-)
-MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
+from django.utils.translation import gettext_lazy as _
+
+# LANGUAGES = [
+#     ('en', _('English')),
+#     ('uz', _('Uzbek')),
+#     # Add more languages as needed
+# ]
+
+# MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
+'TRANSLATABLE_MODEL_MODULES'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
