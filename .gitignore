@@ -5,7 +5,7 @@
 *.log
 *.pot
 *.pyc
-pycache/
+__pycache__/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
@@ -123,7 +123,7 @@ ipython_config.py
 .pdm.toml
 
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
-pypackages/
+__pypackages__/
 
 # Celery stuff
 celerybeat-schedule
