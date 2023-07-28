@@ -28,11 +28,11 @@ class Place(models.Model):
     def str(self) -> str:
         return self.name
     class Meta:
-        db_name="Place"
+        db_table="Place"
 class Booking(models.Model):
     place = models.ForeignKey(Place,on_delete=models.CASCADE,null=True)
     starting_time = models.TimeField(default=datetime.now)
     ending_time = models.TimeField(default=datetime.now)
     start_free_time = models.TimeField(null=True, blank=True)
     class Meta:
-        db_name="Place"
+        db_table="Place"
