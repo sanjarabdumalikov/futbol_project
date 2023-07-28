@@ -20,3 +20,4 @@ class AllCreatePlaceView(generics.ListCreateAPIView):
 class DetailUpdateDeleteApiView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Place.objects.all()
     serializer_class = PlaceSerializer
+
