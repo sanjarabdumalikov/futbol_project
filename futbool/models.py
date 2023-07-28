@@ -5,6 +5,10 @@ from django.db import models
 from django.contrib.auth.models import User
 from datetime import datetime
 # Create your models here.
+from django.conf import settings
+
+user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+
 class CustomUser(AbstractUser):
     ROLE_CHOICES = (
         ('n','name'),
@@ -22,17 +26,16 @@ class Place(models.Model):
     contact = models.CharField(max_length=50,default='')
     image = models.ImageField(upload_to='upolad/Place')
     booking_place_per_hour=models.IntegerField(default=0)
-    user = models.ForeignKey(User,on_delete=models.CASCADE,default=None,null=True)
-
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
     def str(self) -> str:
         return self.name
-    class Meta:
-        db_name="Place"
+    # class Meta:
+    #     db_name="Place"
 class Booking(models.Model):
     place = models.ForeignKey(Place,on_delete=models.CASCADE,null=True)
     starting_time = models.TimeField(default=datetime.now)
     ending_time = models.TimeField(default=datetime.now)
     start_free_time = models.TimeField(null=True, blank=True)
-    class Meta:
-        db_name="Place"
+    # class Meta:
+    #     db_name="Place"
