@@ -21,3 +21,11 @@ class DetailUpdateDeleteApiView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Place.objects.all()
     serializer_class = PlaceSerializer
 
+class AllCreateBookingView(generics.ListCreateAPIView):
+    queryset = Place.objects.all()
+    serializer_class = BookingSerializer
+
+
+class DetailUpdateDeleteApiView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Place.objects.all()
+    serializer_class = BookingSerializer
