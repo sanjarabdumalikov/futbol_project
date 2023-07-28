@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'futbool',
     'rest_framework',
     'rest_framework_simplejwt',
-
+    'modeltranslation',
+    'config',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
