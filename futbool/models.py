@@ -23,16 +23,16 @@ class Place(models.Model):
     image = models.ImageField(upload_to='upolad/Place')
     booking_place_per_hour=models.IntegerField(default=0)
     user = models.ForeignKey(User,on_delete=models.CASCADE,default=None,null=True)
-
+    
 
     def str(self) -> str:
         return self.name
     class Meta:
-        db_name="Place"
+        db_table="Place"
 class Booking(models.Model):
     place = models.ForeignKey(Place,on_delete=models.CASCADE,null=True)
     starting_time = models.TimeField(default=datetime.now)
     ending_time = models.TimeField(default=datetime.now)
     start_free_time = models.TimeField(null=True, blank=True)
     class Meta:
-        db_name="Place"
+        db_table="Place"
