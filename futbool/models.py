@@ -37,5 +37,7 @@ class Booking(models.Model):
     starting_time = models.TimeField(default=datetime.now)
     ending_time = models.TimeField(default=datetime.now)
     start_free_time = models.TimeField(null=True, blank=True)
+    def str(self) -> str:
+        return self.name
     class Meta:
         db_table = "Booking"
