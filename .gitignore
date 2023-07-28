@@ -157,8 +157,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-.env
-staticfiles
+
+staticfiles/
 
 # pytype static type analyzer
 .pytype/
